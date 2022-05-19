@@ -6,7 +6,12 @@
 
     var localExibidor = document.getElementById('exibidor')
 
-    var valor = []
+    var valoresObjeto = {
+        valor1 : 0,
+        valor2 : 0,
+        operador : ''
+    }
+
     var numero = 0
 
     var exibidor = ``
@@ -21,63 +26,102 @@
         exibidor += this.defaultValue
         localExibidor.innerHTML = `<p>${exibidor}</p>`
     })}
-
+if(valoresObjeto.valor1 == 0){
   valores[0].addEventListener('click', function somar(){
-   valor.push(Number(numero))
-   valor.push('+')
+   valoresObjeto.valor1 = Number(numero)
+   valoresObjeto.operador = '+'
    exibidor += this.defaultValue
    numero = 0
    localExibidor.innerHTML = `<p>${exibidor}</p>`
+   console.log(valoresObjeto.valor1)
   })
   valores[1].addEventListener('click', function subtrair(){
-    valor.push(Number(numero))
-    valor.push('-')
+    valoresObjeto.valor1 = Number(numero)
+    valoresObjeto.operador = '-'
     exibidor += this.defaultValue
     numero = 0
     localExibidor.innerHTML = `<p>${exibidor}</p>`
 })
 valores[2].addEventListener('click', function multiplicar(){
-    valor.push(Number(numero))
-    valor.push('*')
+    valoresObjeto.valor1 = Number(numero)
+    valoresObjeto.operador = '*'
     exibidor += this.defaultValue
     numero = 0
     localExibidor.innerHTML = `<p>${exibidor}</p>`
 })
 valores[3].addEventListener('click', function dividir(){
-    valor.push(Number(numero))
-    valor.push('/')
+    valoresObjeto.valor1 = Number(numero)
+   valoresObjeto.operador = '/'
     exibidor += this.defaultValue
     numero = 0
     localExibidor.innerHTML = `<p>${exibidor}</p>`
+    
 })
+}else {
+    valores[0].addEventListener('click', function somar(){
+        valoresObjeto.valor2 = Number(numero)
+        valoresObjeto.operador = '+'
+        exibidor += this.defaultValue
+        numero = 0
+        localExibidor.innerHTML = `<p>${exibidor}</p>`
+        console.log(valoresObjeto.valor1)
+       })
+       valores[1].addEventListener('click', function subtrair(){
+         valoresObjeto.valor2 = Number(numero)
+         valoresObjeto.operador = '-'
+         exibidor += this.defaultValue
+         numero = 0
+         localExibidor.innerHTML = `<p>${exibidor}</p>`
+     })
+     valores[2].addEventListener('click', function multiplicar(){
+         valoresObjeto.valor2 = Number(numero)
+         valoresObjeto.operador = '*'
+         exibidor += this.defaultValue
+         numero = 0
+         localExibidor.innerHTML = `<p>${exibidor}</p>`
+     })
+     valores[3].addEventListener('click', function dividir(){
+         valoresObjeto.valor2 = Number(numero)
+        valoresObjeto.operador = '/'
+         exibidor += this.defaultValue
+         numero = 0
+         localExibidor.innerHTML = `<p>${exibidor}</p>`
+         
+     })
 
+}
 function calcular(){
-    valor.push(Number(numero))
-    if(valor[1] == '+'){
-        resultado = calculoSoma (valor[0], valor[2])
+    valoresObjeto.valor2 = Number(numero)
+    if(valoresObjeto.operador == '+'){
+        resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
+        valoresObjeto.valor1 = resultado
     }
-    if(valor[1] == '-'){
-        resultado = calculoSubtracao (valor[0], valor[2])
+    if(valoresObjeto.operador== '-'){
+        resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
+        valoresObjeto.valor1 = resultado
     }
-    if(valor[1] == '*'){
-        resultado = calculoMultiplicacao (valor[0], valor[2])
+    if(valoresObjeto.operador == '*'){
+        resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
+        valoresObjeto.valor1 = resultado
     }
-    if(valor[1] == '/'){
-        resultado = calculoDivisao (valor[0], valor[2])
+    if(valoresObjeto.operador == '/'){
+        resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
+        valoresObjeto.valor1 = resultado
     }
-    valor.splice(1)
-    valor.slice(2)
-    valor[0]= resultado
+    
     exibidor = resultado
     localExibidor.innerHTML = `<p>${exibidor}</p>`
     
-   
+    valoresObjeto.valor1 = resultado
+   valoresObjeto.valor2 = 0
     
 }
 
 function limpar(){
     exibidor = ``
     localExibidor.innerHTML = `<p>${exibidor}</p>`
+    valoresObjeto.valor1 = 0
+    valoresObjeto.valor2 = 0
     
     
 }
