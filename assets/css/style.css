@@ -1,0 +1,76 @@
+body{
+    height: 100vh;
+    background: rgb(51,1,88);
+background: linear-gradient(129deg, rgba(51,1,88,1) 0%, rgba(115,25,96,1) 71%, rgba(117,5,164,1) 98%);
+font-family: 'Koulen', cursive;
+}
+header{
+    height: 100px;
+    text-align: center;
+}
+.titulo{
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: rgb(78, 78, 78) 1px 1px ;
+}
+#container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 6rem auto;
+}
+.calculadora{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#exibidor{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px 0;
+    width: 100%;
+    background-color: white;
+    border: #222222 solid 2px;
+    text-align: center;
+}
+.botoes__calculo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.botoes__calculo input{
+    background-color: #222222;
+    color: white;
+    font-size: 40px;
+    width: 25%;
+    border: 1px solid white;
+    padding: 30px;
+}
+.botoes__numerais{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.botoes__numerais input{
+    width: 33.33%;
+    font-size:34px;
+    border: 1px solid black;
+    color: #222222;
+    background-color: white;
+    padding: 10px;
+    width: bold;
+}
+.botoes__numerais input:last-child {
+    color: red;
+}
+.botoes__numerais input:nth-child(11){
+    color: green;
+}
+
