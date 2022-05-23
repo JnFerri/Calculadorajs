@@ -32,21 +32,37 @@
         if(valoresObjeto.valor1 ===0){
         valoresObjeto.valor1 = Number(numero)}
         else if(valoresObjeto.valor1 > 0) {
-            numero=0
-            valoresObjeto.valor2 = Number(numero)
+            
+            valoresObjeto.operador = '+'
+            valoresObjeto.valor2 = 0
+            
                 if(valoresObjeto.operador == '+'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
+                    
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador== '-'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '*'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                    var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '/'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
+                valoresObjeto.valor2 = 0
                 }
                 valoresObjeto.valor1 = resultado
+                valoresObjeto.operador = ''
             }
         valoresObjeto.operador = '+'
         exibidor += this.defaultValue
@@ -58,21 +74,39 @@
         if(valoresObjeto.valor1 ===0){
             valoresObjeto.valor1 = Number(numero)}
             else if(valoresObjeto.valor1 > 0) {
-                numero=0
-                valoresObjeto.valor2 = Number(numero)
+                
+                valoresObjeto.operador = '-'
+                valoresObjeto.valor2 = 0
+                
                 if(valoresObjeto.operador == '+'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador== '-'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
+                    
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '*'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                    var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
+                   
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '/'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
+                    
+                valoresObjeto.valor2 = 0
                 }
                 valoresObjeto.valor1 = resultado
+                valoresObjeto.operador = ''
             }
 
          valoresObjeto.operador = '-'
@@ -84,21 +118,39 @@
         if(valoresObjeto.valor1 ===0){
             valoresObjeto.valor1 = Number(numero)}
             else if(valoresObjeto.valor1 > 0) {
-                numero=0
-                valoresObjeto.valor2 = Number(numero)
+            
+                valoresObjeto.operador = '*'
+                valoresObjeto.valor2 = 0
                 if(valoresObjeto.operador == '+'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
+                    
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador== '-'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
+                   
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '*'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                    var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
+                   
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '/'){
+                    valoresObjeto.valor2 = 0
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
+                   
+                valoresObjeto.valor2 = 0
                 }
                 valoresObjeto.valor1 = resultado
+                valoresObjeto.operador = ''
             }
 
          valoresObjeto.operador = '*'
@@ -110,24 +162,42 @@
         if(valoresObjeto.valor1 ===0){
             valoresObjeto.valor1 = Number(numero)}
             else if(valoresObjeto.valor1 > 0){
-                numero=0
-                valoresObjeto.valor2 = Number(numero)
+                
+                valoresObjeto.operador = '/'
+                valoresObjeto.valor2 = 0
                 if(valoresObjeto.operador == '+'){
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
+                    
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador== '-'){
+                    
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
+                    
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '*'){
+                    
+                    valoresObjeto.valor2 = Number(numero)
                    var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
+                   
+                valoresObjeto.valor2 = 0
                 }
                 if(valoresObjeto.operador == '/'){
+                    
+                    valoresObjeto.valor2 = Number(numero)
                     var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
+                    
+                valoresObjeto.valor2 = 0
                 }
+                valoresObjeto.operador = ''
                 valoresObjeto.valor1 = resultado
+               
             }
 
-        valoresObjeto.operador = '/'
+        
          exibidor += this.defaultValue
          numero = 0
          localExibidor.innerHTML = `<p>${exibidor}</p>`
@@ -161,6 +231,7 @@ function calcular(){
    if(numero === 0){
     localExibidor.innerHTML = '<p>Coloque um valor !!</p>'
 }
+    numero = 0
 }
 
 function limpar(){
