@@ -26,208 +26,58 @@
         exibidor += this.defaultValue
         localExibidor.innerHTML = `<p>${exibidor}</p>`
     })}
-
- 
-    valores[0].addEventListener('click', function somar(){
-        if(valoresObjeto.valor1 ===0){
-        valoresObjeto.valor1 = Number(numero)}
-        else if(valoresObjeto.valor1 > 0) {
-            
+    
+ for(i = 0; i < 4;i++){
+    valores[i].addEventListener('click', function somar(){
+        if(valoresObjeto.valor1 ==0){
+            valoresObjeto.valor1 = Number(numero)
+            valoresObjeto.operador = this.defaultValue
+            numero = 0}
+     else if(valoresObjeto.valor1 > 0) {
+        
+            if(valoresObjeto.operador == '+'){
+            valoresObjeto.valor1= calculoSoma(valoresObjeto.valor1, Number(numero))
             valoresObjeto.operador = '+'
-            valoresObjeto.valor2 = 0
-            
-                if(valoresObjeto.operador == '+'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
-                    
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador== '-'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '*'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                   var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '/'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
-                valoresObjeto.valor2 = 0
-                }
-                valoresObjeto.valor1 = resultado
-                valoresObjeto.operador = ''
-            }
-        valoresObjeto.operador = '+'
-        exibidor += this.defaultValue
-        numero = 0
-        localExibidor.innerHTML = `<p>${exibidor}</p>`
-        console.log(valoresObjeto.valor1)
-       })
-       valores[1].addEventListener('click', function subtrair(){
-        if(valoresObjeto.valor1 ===0){
-            valoresObjeto.valor1 = Number(numero)}
-            else if(valoresObjeto.valor1 > 0) {
-                
+            } 
+             else if(valoresObjeto.operador == '-'){
+                valoresObjeto.valor1= calculoSubtracao(valoresObjeto.valor1, Number(numero))
                 valoresObjeto.operador = '-'
-                valoresObjeto.valor2 = 0
-                
-                if(valoresObjeto.operador == '+'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador== '-'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
-                    
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '*'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                   var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
-                   
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '/'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
-                    
-                valoresObjeto.valor2 = 0
-                }
-                valoresObjeto.valor1 = resultado
-                valoresObjeto.operador = ''
             }
-
-         valoresObjeto.operador = '-'
-         exibidor += this.defaultValue
-         numero = 0
-         localExibidor.innerHTML = `<p>${exibidor}</p>`
-     })
-     valores[2].addEventListener('click', function multiplicar(){
-        if(valoresObjeto.valor1 ===0){
-            valoresObjeto.valor1 = Number(numero)}
-            else if(valoresObjeto.valor1 > 0) {
-            
+             else if(valoresObjeto.operador == '*'){
+                valoresObjeto.valor1= calculoMultiplicacao(valoresObjeto.valor1, Number(numero))
                 valoresObjeto.operador = '*'
-                valoresObjeto.valor2 = 0
-                if(valoresObjeto.operador == '+'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
-                    
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador== '-'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
-                   
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '*'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                   var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
-                   
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '/'){
-                    valoresObjeto.valor2 = 0
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
-                   
-                valoresObjeto.valor2 = 0
-                }
-                valoresObjeto.valor1 = resultado
-                valoresObjeto.operador = ''
             }
-
-         valoresObjeto.operador = '*'
-         exibidor += this.defaultValue
-         numero = 0
-         localExibidor.innerHTML = `<p>${exibidor}</p>`
-     })
-     valores[3].addEventListener('click', function dividir(){
-        if(valoresObjeto.valor1 ===0){
-            valoresObjeto.valor1 = Number(numero)}
-            else if(valoresObjeto.valor1 > 0){
-                
+             else if(valoresObjeto.operador =='/'){
+                valoresObjeto.valor1= calculoDivisao(valoresObjeto.valor1, Number(numero))
                 valoresObjeto.operador = '/'
-                valoresObjeto.valor2 = 0
-                if(valoresObjeto.operador == '+'){
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
-                    
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador== '-'){
-                    
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
-                    
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '*'){
-                    
-                    valoresObjeto.valor2 = Number(numero)
-                   var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
-                   
-                valoresObjeto.valor2 = 0
-                }
-                if(valoresObjeto.operador == '/'){
-                    
-                    valoresObjeto.valor2 = Number(numero)
-                    var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
-                    
-                valoresObjeto.valor2 = 0
-                }
-                valoresObjeto.operador = ''
-                valoresObjeto.valor1 = resultado
-               
-            }
-
-        
+            }}
+            valoresObjeto.operador = this.defaultValue
          exibidor += this.defaultValue
          numero = 0
          localExibidor.innerHTML = `<p>${exibidor}</p>`
-         
-     })
-
         
+     })}
+
 
 function calcular(){
     
-    valoresObjeto.valor2 = Number(numero)
-    console.log(valoresObjeto)
     if(valoresObjeto.operador == '+'){
-        var resultado = calculoSoma (valoresObjeto.valor1, valoresObjeto.valor2)
+        var resultado = calculoSoma (valoresObjeto.valor1, Number(numero))
     }
-    if(valoresObjeto.operador== '-'){
-        var resultado = calculoSubtracao (valoresObjeto.valor1, valoresObjeto.valor2)
+    else if(valoresObjeto.operador == '-'){
+        var resultado = calculoSubtracao (valoresObjeto.valor1, Number(numero))
     }
-    if(valoresObjeto.operador == '*'){
-       var resultado = calculoMultiplicacao (valoresObjeto.valor1, valoresObjeto.valor2)
+    else if(valoresObjeto.operador =='*'){
+       var resultado = calculoMultiplicacao (valoresObjeto.valor1, Number(numero))
     }
-    if(valoresObjeto.operador == '/'){
-        var resultado = calculoDivisao (valoresObjeto.valor1, valoresObjeto.valor2)
+    else if(valoresObjeto.operador =='/'){
+        var resultado = calculoDivisao (valoresObjeto.valor1, Number(numero))
     }
     
     exibidor = resultado
     localExibidor.innerHTML = `<p>${exibidor}</p>`
     
     valoresObjeto.valor1 = resultado
-   valoresObjeto.valor2 = 0
    if(numero === 0){
     localExibidor.innerHTML = '<p>Coloque um valor !!</p>'
 }
@@ -241,7 +91,6 @@ function limpar(){
     valoresObjeto.valor1 = 0
     valoresObjeto.valor2 = 0
     valoresObjeto.operador = ''
-    
     
 }
     
