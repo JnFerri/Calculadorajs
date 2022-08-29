@@ -78,7 +78,7 @@ header{
 
 .botoes__numerais input{
     width: 33.33%;
-    font-size:34px;
+    font-size:28px;
     border: 2px solid black;
     color: #222222;
     background-color: white;
@@ -97,19 +97,27 @@ header{
 }
 .botoes__numerais input:last-child {
     text-align: center;
-    font-size: 24px;
     color: red;
     background-color: #222222;
 }
 .botoes__numerais input:nth-child(11){
     text-align: center;
-    font-size: 24px;
     color: green;
     background-color: #222222;
 }
 
 @media(max-width:798px) {
+    
     #container{
         width: 98%;
     }
+
+    .botoes__numerais input:last-child {
+        font-size: 22px;
+    }
+
+    .botoes__numerais input:nth-child(11){
+       font-size: 22px;
+    }
+
 }
