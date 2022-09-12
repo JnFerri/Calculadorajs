@@ -77,6 +77,7 @@ function calcular(){
         valoresObjeto.valor1 = resultado
     }
     
+    
     exibidor = resultado
     localExibidor.innerHTML = `<p>${exibidor}</p>`
     
